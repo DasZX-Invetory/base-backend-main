@@ -13,6 +13,7 @@ import 'package:backend_daszx_inventory/infra/dependency_injector/dependency_inj
 import 'package:backend_daszx_inventory/infra/security/security_service.dart';
 import 'package:backend_daszx_inventory/infra/security/security_service_imp.dart';
 import 'package:backend_daszx_inventory/services/login_service.dart';
+import 'package:backend_daszx_inventory/services/bootstrap_service.dart';
 import 'package:backend_daszx_inventory/services/tenant_service.dart';
 import 'package:backend_daszx_inventory/services/user_service.dart';
 
@@ -25,6 +26,9 @@ class Injects {
 
     // BANCO DE DADOS (PostgreSQL)
     di.register<DbConfiguration>(() => PostgreDbConfiguration());
+    di.register<BootstrapService>(
+      () => BootstrapService(di<DbConfiguration>()),
+    );
 
     // SEGURANÇA
     di.register<SecurityService>(() => SecurityServiceImpl());

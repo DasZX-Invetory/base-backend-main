@@ -32,10 +32,12 @@ class PostgreDbConfiguration implements DbConfiguration {
     );
 
     try {
-      return await Connection.open(
+      final connection = await Connection.open(
         endpoint,
         settings: ConnectionSettings(sslMode: SslMode.disable),
       );
+      print('[OK/DB] -> PostgreSQL conectado');
+      return connection;
     } catch (e) {
       throw Exception('[ERRO/DB] -> Falha ao conectar PostgreSQL: $e');
     }

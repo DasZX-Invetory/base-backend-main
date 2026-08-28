@@ -8,13 +8,17 @@ import 'package:backend_daszx_inventory/api/users/user_owner_api.dart';
 import 'package:backend_daszx_inventory/core/config/app_env_keys.dart';
 import 'package:backend_daszx_inventory/core/security/app_roles.dart';
 import 'package:backend_daszx_inventory/infra/custom_server.dart';
+import 'package:backend_daszx_inventory/infra/database/db_configuration.dart';
 import 'package:backend_daszx_inventory/infra/dependency_injector/injects.dart';
 import 'package:backend_daszx_inventory/infra/middleware_intercepton.dart';
+import 'package:backend_daszx_inventory/services/bootstrap_service.dart';
 import 'package:backend_daszx_inventory/utils/custom_env.dart';
 import 'package:shelf/shelf.dart';
 
 void main() async {
   final di = Injects.initialize();
+  await di<DbConfiguration>().connection;
+  await di<BootstrapService>().initDefaultData();
 
   // Obtem as APIs do container de DI
   var cascade = Cascade()
