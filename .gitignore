@@ -1,0 +1,11 @@
+# Dart / build
+.dart_tool/
+.packages
+build/
+
+# Local environment
+.env
+
+# IDE / OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+# 1. Senhas e Variáveis de Ambiente Locais
+# O K3s vai injetar as senhas via Secret, então o arquivo local não pode ir pra nuvem.
+.env
+.env.example
+
+# 2. Infraestrutura e K3s
+# O Docker não precisa saber como o Kubernetes funciona.
+deploy/
+docker-compose.yml
+
+# 3. Banco de Dados Local
+# Como expliquei, o Dart não roda SQL. A injeção será feita pelo K3s.
+database/
+
+# 4. Documentação e Tutoriais
+# Muito úteis para você, mas inúteis para o servidor rodar o código.
+Tutorial/
+CHANGELOG.md
+README.md
+
+# 5. Configurações de CI/CD (GitHub Actions)
+.github/
+
+# 6. Pastas Nativas do Dart e IDEs (Cache e compilação local)
+.dart_tool/
+build/
+.vscode/
+.idea/
+.git/

@@ -1,0 +1,22 @@
+## Indice de Tutoriais
+
+### Ordem de leitura recomendada
+
+1. 01_TUTORIAL_COMPLETO.md
+2. 02_TUTORIAL_COMPLETO_PARTE2.md
+3. 03_TUTORIAL_LIBS_TEMPLATE.md
+4. 04_JWT_ROLES_TUTORIAL.md
+5. 05_TUTORIAL_MIDDLEWARE_STATUS_USUARIO.md
+6. 06_TUTORIAL_POSTGRESQL_MIGRACAO.md
+7. 07_TUTORIAL_DOCKER_TEMPLATE.md
+8. 08_TUTORIAL_KUBERNETES_K3S_TEMPLATE.md
+9. 09_EXEMPLOS_MODELS_SERVICES_APIS.md
+10. 10_CHECKLIST_TEMPLATE.md
+
+### Uso por objetivo
+
+- Fundacao do template: 01, 02 e 03
+- Seguranca: 04 e 05
+- Banco de dados: 06
+- Deploy: 07 e 08
+- Consulta rapida e execucao: 09 e 10
